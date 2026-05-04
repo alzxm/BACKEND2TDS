@@ -4,7 +4,7 @@ function calcularPontuacaoTotal(historicoDePontos) {
     const somarRodada = function(acumulador, pontosDaFase) {
         const novaSoma = acumulador + pontosDaFase;
         return novaSoma;
-    }; pink ni
+    }; 
     
     const pontuacaoFinal = historicoDePontos.reduce(somarRodada, 0)
     return pontuacaoFinal;
@@ -26,8 +26,25 @@ function atualizarInventario(inventarioAtual, acao, nomeDoItem) {
     if(acao === "pegar") {
         const inventarioComItenNovo = [inventarioAtual, nomeDoItem];
         novoInventario = inventarioComItenNovo;
-    } else if (acao === "descartar") //parei aqui
-}
+    } else if (acao === "descartar") {
+         const inventarioSemUltimoItem  = inventarioAtual.slice();
+         novoInventario = inventarioSemUltimoItem;
+         } else {
+            novoInventario = inventarioAtual;
+         }
+         return novoInventario; // Retornar a mochila do jogador atualizada
+    }
 
-const pontosDoJogador = [100, 50, 200, 10]
-console.log(pontosDoJogador);
+const pontosDoJogador = [400, 50, 250, 77]
+const total = calcularPontuacaoTotal(pontosDoJogador);
+console.log("Pontuação final: ", total);
+
+const missoes = [
+    {nome: "Salvar a aldeia", status: "Concluída"},
+    {nome "Encontrar mapa", status: "Em andamento"},
+    {nome "Derrotar o chefão", status: "Falhou"},
+    {nome "Coletar recursos", status: "Conclída"}
+];
+
+
+console.log(missoes);
