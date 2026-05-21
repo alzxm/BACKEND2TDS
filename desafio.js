@@ -23,14 +23,22 @@ const produto = "Caderno";
 let precoSecundario = 40;
 let quantidade = 60;
 
-const descontoSecundario = 0.30
-const precoSecundarioComDesconto = (precoSecundario * descontoSecundario) /100
+// Valor total
+const valorTotal = precoSecundario * quantidade;
 
-const capital = 500.00
-let totalDeProdutos = 
+// Valor com 20% de desconto
+const desconto20 = valorTotal * 0.2; 
+const valorComDesconto = valorTotal - desconto20;
  
+// Quantos produtos cabem em R$ 500
+const dinheiroDisponivel = 500;
+const produtosInteiros = Math.floor(dinheiroDisponivel / precoSecundario);
 
+// Troco que sobra
+const troco = dinheiroDisponivel - (produtosInteiros * precoSecundario);
 
-
-
-
+// Mostrar resultados
+console.log(`O valor total da compra é R$ ${valorTotal}`);
+console.log(`O valor com 20% de desconto é R$ ${valorComDesconto}`);
+console.log(`Com R$ 500, você pode comprar ${produtosInteiros} ${produto}s`);
+console.log(`E ainda sobra R$ ${troco} de troco`);
