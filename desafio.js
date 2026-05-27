@@ -13,7 +13,7 @@ console.log(`Estoque limitado: apenas ${quantidadeDoEstoque} unidades. Garanta o
 
 let precoInicial = 12;
 const desconto = 0.3
-const precoComDesconto = precoInicial - desconto;
+const precoComDesconto = Math.floor(precoInicial - desconto);
 
 console.log(`Além disso, temos 3% de desconto. Então, você irá levar o ${nomeDoProduto} por R$${precoComDesconto}`);
 
@@ -23,22 +23,20 @@ const produto = "Caderno";
 let precoSecundario = 40;
 let quantidade = 60;
 
-// Valor total
-const valorTotal = precoSecundario * quantidade;
+const descontoSecundario = 0.20;
+const precoComDescontoSecundario = (precoSecundario * descontoSecundario);
+const precoAtualizado = precoSecundario - precoComDescontoSecundario;
 
-// Valor com 20% de desconto
-const desconto20 = valorTotal * 0.2; 
-const valorComDesconto = valorTotal - desconto20;
- 
-// Quantos produtos cabem em R$ 500
-const dinheiroDisponivel = 500;
-const produtosInteiros = Math.floor(dinheiroDisponivel / precoSecundario);
+console.log(`Somente nas lojas americanas, o ${produto} está saindo no preço bruto de ${precoSecundario} reais. Porém, estamos com desconto de 20%, então nosso produto ficará ${precoAtualizado} reais`);
 
-// Troco que sobra
-const troco = dinheiroDisponivel - (produtosInteiros * precoSecundario);
 
-// Mostrar resultados
-console.log(`O valor total da compra é R$ ${valorTotal}`);
-console.log(`O valor com 20% de desconto é R$ ${valorComDesconto}`);
-console.log(`Com R$ 500, você pode comprar ${produtosInteiros} ${produto}s`);
-console.log(`E ainda sobra R$ ${troco} de troco`);
+// Quantos produtos inteiros se compra com R$ 500 reais, e quando sobra de troco:
+
+const quinhentosReais = 500;
+const quantidadeCadernos = Math.floor(quinhentosReais / precoSecundario);
+const troco = quinhentosReais % precoSecundario;
+
+console.log(`Você pode comprar ${quantidadeCadernos} cadernos com apenas 500 reais.`);
+console.log(`E o melhor, ainda vai sobrar R$ ${troco} de troco.`);
+
+// 4. Declare estoque e preço e exiba se o produto entra em promoção, se está em falta e se precisa de reposição de produto.
