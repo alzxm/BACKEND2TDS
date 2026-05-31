@@ -39,4 +39,4 @@ const troco = quinhentosReais % precoSecundario;
 console.log(`Você pode comprar ${quantidadeCadernos} cadernos com apenas 500 reais.`);
 console.log(`E o melhor, ainda vai sobrar R$ ${troco} de troco.`);
 
-// 4. Declare estoque e preço e exiba se o produto entra em promoção, se está em falta e se precisa de reposição de produto.
+// 4. Declare estoque e preço e exiba se o produto entra em promoção, se está em falta e se precisa de reposição de produto
