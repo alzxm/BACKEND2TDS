@@ -5,7 +5,7 @@ let numeracaoDoLote = 13579;
 let validadeDoProduto = "01/07/27";
 let quantidadeDoEstoque = 50;
 
-console.log(`Atenção! O produto ${nomeDoProduto} (Lote: ${numeracaoDoLote}, Validade: ${validadeDoProduto}) está disponível por apenas R$${preco}!`);
+console.log(`\nAtenção! O produto ${nomeDoProduto} (Lote: ${numeracaoDoLote}, Validade: ${validadeDoProduto}) está disponível por apenas R$${preco}!`);
 
 console.log(`Estoque limitado: apenas ${quantidadeDoEstoque} unidades. Garanta o seu agora!`);
 
@@ -27,7 +27,7 @@ const descontoSecundario = 0.20;
 const precoComDescontoSecundario = (precoSecundario * descontoSecundario);
 const precoAtualizado = precoSecundario - precoComDescontoSecundario;
 
-console.log(`Somente nas lojas americanas, o ${produto} está saindo no preço bruto de ${precoSecundario} reais. Porém, estamos com desconto de 20%, então nosso produto ficará ${precoAtualizado} reais`);
+console.log(`\nSomente nas lojas americanas, o ${produto} está saindo no preço bruto de ${precoSecundario} reais. Porém, estamos com desconto de 20%, então nosso produto ficará ${precoAtualizado} reais`);
 
 
 // Quantos produtos inteiros se compra com R$ 500 reais, e quando sobra de troco:
@@ -39,4 +39,13 @@ const troco = quinhentosReais % precoSecundario;
 console.log(`Você pode comprar ${quantidadeCadernos} cadernos com apenas 500 reais.`);
 console.log(`E o melhor, ainda vai sobrar R$ ${troco} de troco.`);
 
-// 4. Declare estoque e preço e exiba se o produto entra em promoção, se está em falta e se precisa de reposição de produto
+// Parte 4 
+// Declare estoque e preço e exiba se o produto, está em falta e se precisa de reposição de produto.
+
+const canetas = "canetas";
+const precoDaCaneta = 12
+let estoqueDaCaneta = 30
+let reposição = false;
+
+console.log(`\n As nossas ${canetas} estão saindo por ${precoDaCaneta} reais. `);
+console.log(`Em nosso estoque tem ${estoqueDaCaneta} canetas. Então precisamos de reposição? ${reposição}.`);
